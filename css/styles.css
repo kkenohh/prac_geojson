@@ -1,6 +1,8 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 #container {
@@ -8,19 +10,20 @@ body {
   height: 100vh;
   flex-direction: row;
   align-items: stretch;
+  width: 100vw;
 }
 
 #side-panel {
-  flex-basis: 500px;
-  overflow-y: scroll;
+  background-color: #fff;
+  width: 43%;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 #map {
-  flex-grow: 1;
-}
-
-button {
-  margin-bottom: 10px;
+  width: 100vw;
+  height: 100vh;
 }
 
 table {
@@ -42,4 +45,10 @@ tr:nth-child(even) {
 
 button, h2 {
   margin: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  #side-panel {
+    display: none;
+  }
 }
